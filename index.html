@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PixelWar - Prototype</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <aside class="side">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <h1>PixelWar</h1>
+          <div class="quiet">Prototype jouable avec crédits fictifs</div>
+        </div>
+      </div>
+
+      <section class="stats" aria-label="Statistiques">
+        <div class="stat"><div class="label">Pixels</div><div class="value" id="credits">30</div></div>
+        <div class="stat"><div class="label">Bombes</div><div class="value" id="bombs">1</div></div>
+        <div class="stat"><div class="label">Placés</div><div class="value" id="placed">0</div></div>
+        <div class="stat"><div class="label">Grille</div><div class="value">5000</div></div>
+      </section>
+
+      <section class="box">
+        <div class="box-title">Outil</div>
+        <div class="tools">
+          <button class="tool active" id="paintTool" type="button">Pixel</button>
+          <button class="tool" id="bombTool" type="button">Bombe</button>
+        </div>
+      </section>
+
+      <section class="box">
+        <div class="box-title">Couleur</div>
+        <div class="swatches" id="swatches"></div>
+      </section>
+
+      <section class="box">
+        <div class="box-title">Semaine</div>
+        <div class="quiet">La vraie version remettra la grille à zéro automatiquement chaque semaine.</div>
+        <button class="reset" id="resetButton" type="button">Réinitialiser</button>
+      </section>
+    </aside>
+
+    <section class="board-wrap">
+      <canvas id="board" aria-label="Grille de jeu PixelWar"></canvas>
+      <div class="hud">
+        <div class="pill" id="coord">x: 0, y: 0</div>
+        <div class="pill">Molette: zoom</div>
+        <div class="pill">Clic droit ou espace: déplacer</div>
+      </div>
+    </section>
+
+    <aside class="shop">
+      <h2>Boutique test</h2>
+      <div id="packs"></div>
+      <p class="quiet">Aucun vrai paiement ici. Pour l’app finale, il faudra utiliser les achats intégrés Apple/Google et valider les achats côté serveur.</p>
+      <div class="roadmap">
+        <div><b>Étape 1</b>Tester le plaisir de poser, défendre et attaquer des créations.</div>
+        <div><b>Étape 2</b>Ajouter les comptes, le serveur et la grille partagée en temps réel.</div>
+        <div><b>Étape 3</b>Publier sur GitHub, puis préparer Play Store et App Store.</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="./src/app.js"></script>
+</body>
+</html>
